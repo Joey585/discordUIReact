@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import MessageFrame from "./components/MessageFrame";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h3 className="text-info">Create artificial discord message</h3>
+        <label className="form-label m-3">Avatar Link</label>
+        <input type="text" className="form-text"/>
+        <label className="form-label m-3">Message</label>
+        <input className="form-text" type="text"/>
+        <button className="btn-primary btn m-3">Submit</button>
+
+        <MessageFrame />
     </div>
   );
 }
